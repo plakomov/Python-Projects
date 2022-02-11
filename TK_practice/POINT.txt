@@ -1,0 +1,10 @@
+# The point of this folder is to store all of the tutorial
+practice done using Tk and tkinter modules
+
+# Reason: A lot of the future modules will depand on Tkinter
+so it will be nice to know how to use it pretty well
+
+Goal 1: Cover the tkinter tutorial 
+(Pretty long)
+
+Deadline: January 22nd, 2022 

@@ -1,0 +1,49 @@
+<Activate>:
+Window has become active.
+<Deactivate>:
+Window has been deactivated.
+<MouseWheel>:
+Scroll wheel on mouse has been moved.
+<KeyPress>:
+Key on keyboard has been pressed down.
+<KeyRelease>:
+Key has been released.
+<ButtonPress>:
+A mouse button has been pressed.
+<ButtonRelease>:
+A mouse button has been released.
+<Motion>:
+Mouse has been moved.
+<Configure>:
+Widget has changed size or position.
+<Destroy>:
+Widget is being destroyed.
+<FocusIn>:
+Widget has been given keyboard focus.
+<FocusOut>:
+Widget has lost keyboard focus.
+<Enter>:
+Mouse pointer enters widget.
+<Leave>:
+Mouse pointer leaves widget.
+
+
+Best place to look for event paramaters is look at
+the bind command reference
+
+A complete list of keystroke commands can be found in the 
+keysyms command reference
+
+Event modifiers - like a mouse button being held down, or 
+double tapped 
+Event modifiers for when keys on the keyboard are held
+down inline control, Shift, Alt, Option and Command
+
+Virtual Events  -- higher-level, semantic events
+indicate by double angle brackets around the event name
+e.g <<foo>>
+
+One can generate virtual events that work exactly like general
+events like this
+root.event_generate("<<MyOwnEvent>>")
+This will be application specific event

@@ -1,0 +1,106 @@
+1) Widget are Python objects and they have a hierarchy
+
+
+Geometry Management (Basically the placement of widgets)
+grid command is positions the widgets; grid is an
+example of a geometry manager
+
+
+Tk runs an event loop that received events from  the 
+operating system such as mouse clicks, scrolling, keystrokes,
+and etc. 
+** Its critical the event loop not be blocked or the program
+may appear to be frozen
+
+
+
+Command Callbacks --> do something when an event occurs
+
+
+Binding to Events
+For events that don't have any widget specific command callback
+associated with them, you can use Tk's bind to capture any even
+and then (like with callbacks) excecute an arbitrary piece of
+code
+
+Binding can also capture not only one event but a sequence 
+of short events such as double click, or two keystrokes 
+pressed simultaneously 
+
+
+Frame widgets -- display a simple rectangle that is used
+to organize the other widgets, it's ofter the master widget
+for the geometry manager grid command
+
+Frames have a style configuration option, which is common to
+all of the themed widgets -- lets you control certain aspects
+of the appearance or behavior of the frame
+
+Label widget --> just provides text; user does not interact
+with the text; provide feedback, identify controls etc.
+
+# Labels can also display GIFS or images
+
+Button widget -- interactive widget; users press a button
+to perform an action; can display text or images
+
+Checkbutton -- a regular button that also holds some kind
+of binary value 
+
+Radiobutton widgets - lets you choose between one of several
+mutually exclusive choices
+
+Entry Widget -- presents users with a single-line text field
+where they can input a stiring balue 
+
+Combobox widget -- combines an entry with a list of choices
+let's the user to choose from set of values or input their
+own value
+
+
+Geometry Manager 
+grid command 
+In grid, each widget is assinged a columand and a row number
+Widgets can take more than single cell; use the options
+columnspan and rowspan options
+Every column and row has a weight option telling it by how
+much to extend if there is a resizing
+
+
+Listbox Widget 
+Displays a list of single-line text items and allows the user
+to browse through them and choose one
+In order to populate the list, we cannot use the standard
+Python list; one must wrap the list in a StringVar object
+example:
+choices = ["apple", "orange", "banana"]
+choicesvar = StringVar(value=choices)
+l = Listbox(parent, listvariable=choicesvar)
+
+and we everytime we update the list, we need to update
+the StringVar object
+
+
+#Scrollbar Widget:
+A widget that represents the scrollbar
+
+Text Widget
+A widget that allows the user to enter multiple lines of text
+- Create them using a Text class; use Tk not ttk
+
+Scale Widget
+A scale widget allows users to choose a numeric value through
+direct manipulation
+- Create them using ttk.Scale() classe
+
+Spinbox Widget
+ A widget that allows users to choose numbers 
+(or, in fact, items from an arbitrary list).
+ It does this by combining an entry-like widget showing 
+the current value with a pair of small up/down arrows, 
+which can be used to step through the range of possible 
+choices.
+
+A Progressbar Widget
+- It provides feedback to users about the progress of a
+lengthy operation
